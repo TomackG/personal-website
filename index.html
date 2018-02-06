@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tomack Gilmore</title>
+    <meta name="description" content="Personal webpage of Tomack Gilmore, PhD student in combinatorics at the University of Vienna.">
+    <!-- GOOGLE FONT -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+    <!-- STYLESHEET FOR THIS PAGE-->
+    <link href="Temp.css" rel="stylesheet">
+
+    <!-- LOAD JQUERY-->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="backgroundGen.js"></script>
+
+    <script src = "mainsiteJV.js"></script>
+
+
+
+
+
+
+  </head>
+
+
+
+  <body>
+   <meta name="description" content="Personal webpage of Tomack Gilmore">
+   <div id="Nav" class="topbar" style="z-index:102">
+      <div class="topbar-wrapper">
+        <div class="topbar-left"><a>TOMACK GILMORE</a></div>
+        <div class="topbar-right">
+          <ul>
+            <li id="buttBio" class="button" onclick="displayTexts('Bio')"><a >About</a></li>
+            <li id="buttMaths" class="button" onclick="displayTexts('Maths')"><a >Mathematics</a></li>
+            <li id="buttProj" class="button" onclick="displayTexts('Proj')"><a >Projects</a></li>
+            <li id="buttqMark" class="button" onclick="displayTexts('qMark')"><a>About Tilings</a></li>
+            <li id="TileButt" class="button" onclick="myBG()"><a>Tile the page</a></li>
+            <li id="dualButt" class="button" onclick="$('#Tiling').toggleClass('invisible');$('#TilingHex').toggleClass('invisible');"><a>Dualise</a></li>
+            <li id = "DD" class="button" style="background-color: #595959;color: white;cursor:pointer;padding:5px 10px 5px 10px;" onclick="dropDown()"><a id="DDsign" style="color:white;display:inline-block">+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<div class="ddMenu bottomBit" style="position:fixed;z-index:101">
+    <ul style="list-style-type: none;width:100%;left:0;margin:0 0;padding:0;text-align:center">
+        <li id="buttDDBio" onclick="displayTexts('Bio');dropDown();" style="padding-top: 20px;cursor:pointer;"><a >About</a></li>
+        <li id="buttDDMaths" onclick="displayTexts('Maths');dropDown();" style="padding-top: 1%;cursor:pointer;"><a >Mathematics</a></li>
+        <li id="buttDDProj"  onclick="displayTexts('Proj');dropDown();" style="padding-top: 1%;cursor:pointer;"><a >Projects</a></li>
+        <li id="qDDBut" onclick="displayTexts('qMark');dropDown();" style="padding-top: 1%;cursor:pointer;"><a>About tilings</a></li>
+        <li id="TileDDButt" onclick="dropDown();myBG();" style="padding-top: 1%;cursor:pointer;"><a>Tile the page</a></li>
+        <li id="dualDDButt" onclick="$('#Tiling').toggleClass('invisible');$('#TilingHex').toggleClass('invisible');;dropDown();" style="padding-top: 1%;padding-bottom: 1%;cursor:pointer;"><a>Dualise</a></li>
+
+      </ul>
+    </div>
+
+<div id = "Landing" class = "tester" style = "transition:0.3s ease-in-out;z-index:130">
+<h3 style='font-weight: 500'>Clicking 'Enter' below generates, on the fly, a rhombus tiling of this page.</h3>
+<h3 style='font-weight: 500'> To learn more click the 'About Tilings' tab.</h3>
+<div id = "EntBut" class="button" onclick="buttonFunc();interchangeBG()" style = "position:absolute;width:100%;height:100%;top:45%;text-align:center">
+<a style='font-size: 120%'>Enter</a>
+</div>
+</div>
+ <div id = "BgWrap" style = "position:fixed;width:100%;height:100%;text-align:center;transition:0.3s ease-in-out;">
+  <div id="Tiling" class = "tester  svg-containerBG">
+    <svg xmlns="http://www.w3.org/2000/svg" id = "map" class = "svg-content-responsive" width="1280" height="720" viewBox="100 0 1000 500" preserveAspectRatio="xMidYMid meet">
+    </svg>
+  </div>
+  <div id="TilingHex" class = "tester svg-containerBG invisible">
+    <svg xmlns="http://www.w3.org/2000/svg" id = "mapHex" class = "svg-content-responsive" width="1280" height="720" viewBox="100 0 1000 500" preserveAspectRatio="xMidYMid meet">
+    </svg>
+  </div>
+  </div>
+
+        
+    <div id="TextCont" class="TextContainer"> </div> 
+
+    <!-- - - - - - - - - - - - - - - - - -  ABOUT SECTION - - - - - - - - - - - - - - -->
+    <div id="Bio" class="content">
+      <img src="images/MeTaller.jpg" width="100%">
+
+      <p style="padding-top:2%">I recently completed my PhD in mathematics at the <a href = "https://vd.univie.ac.at/vienna-doctoral-schools/mathematics/" target="_blank">University of Vienna</a> where I was supervised by <a href="http://www.mat.univie.ac.at/~kratt/" target= "_blank" class="link">Christian Krattenthaler</a>. My research focused on the interplay between certain <a href="https://en.wikipedia.org/wiki/Combinatorial" target="_blank">combinatorial structures</a> and <a href="https://en.wikipedia.org/wiki/Statistical_physics" target="_blank">statistical physics</a>. I have a growing interest in statistical machine learning and data science.</p>
+        
+      <p>On this site you will find a collection of my articles and written work, slides from selected talks and presentations, as well as information about other programming/computer science projects that I have been involved in.</p>
+
+      <p style="text-align:center">Feel free to contact me on my <a href='mailto:tomack.gilmore@univie.ac.at' target ='_top'>email address</a>.</p>
+	
+    </div>
+    <!-- - - - - - - - - - - - - - - - -  MATHEMATICS SECTION - - - - - - - - - - - - - - - - - - -->  
+
+    <div id = "Maths" class="content">
+      <div style="position: relative;width:100%;height:auto">
+        <img src="images/MathBg3.jpg" width="100%">
+      </div>
+      
+      <h1 style="padding-top:2%">PHD THESIS</h1>
+<p style='text-align:center'> Rhombus tilings and electrostatics, accepted November 2017 <a href='papers/Thesis' target='_blank'>[PDF]</a>.</p>
+
+      <h1 style='padding-top:2%'>PAPERS</h1>
+      <ol>
+        <li>Enumerating some symmetry classes of rhombus tilings of holey hexagons (extended abstract), DMTCS proc. 27th Int. Conf. Formal Power Series and Algebraic Combinatorics (FPSAC), 2015 <a href="papers/EnumSymm.pdf" target="_blank">[PDF]</a>.</li>
+        <li> Three interactions of holes in two dimensional dimer systems, Electronic Journal of Combinatorics, 2017 <a href="papers/ThreeInteractions.pdf" target = "_blank">[PDF]</a> <a href="http://arxiv.org/abs/1501.05772">[arXiv]</a>.</li>
+        <li>Interactions between interleaving holes in a sea of unit rhombi, available on the arXiv <a href="papers/Interleaving.pdf" target="_blank">[PDF]</a> <a href="http://arxiv.org/abs/1601.01965v2">[arXiv]</a>.</li>
+        <li>Holey matrimony: marrying two approaches to a dimer problem (extended abstract), to appear in the proceedings of FPSAC 2017 <a href="papers/FPSAC2017Sub.pdf" target="_blank">[PDF]</a>.</li>
+        <li>Inverting the Kasteleyn matrix for sub-graphs of the hexagonal lattice, available on the arXiv <a href="papers/InverseKasteleyn.pdf" target="_blank">[PDF]</a> <a href="https://arxiv.org/abs/1701.07092v2">[arXiv]</a>.</li>
+      </ol>
+
+      <h1>TALKS</h1>
+      <ol>
+        <li>Interactions of holes in two dimensional dimer systems, SIAM conference on Algebraic Geometry, Daejeon, Korea 2015 <a href="talks/SIAM.pdf" target="_blank">[PDF]</a>.</li>
+        <li>Symmetric rhombus tilings of holey hexagons and the method of images, 76th Seminaire Lotharingien de Combinatoire, Ottrot, Strasbourg 2016 <a href="talks/SLC76.pdf" target="_blank">[PDF]</a>.</li>
+        <li>Holey matrimony: marrying two approaches to the dimer problem, ALEA Young Researchers Workshop, TU Wien, Vienna, Austria 2016 <a href="talks/ALEA.pdf" target="_blank">[PDF]</a>.</li>
+      </ol>
+
+      <h1>OTHER WORK</h1>
+      <ol>
+        <li> The arithmetic-geometric mean of Gauss, masters thesis, 2012 <a href="papers/AGM.pdf" target="_blank">[PDF]</a>.</li>
+        <li> Computation of the arithmetic-geometric mean, masters project in scientific computing, 2012 <a href="papers/ComputeAGM.pdf" target="_blank">[PDF]</a>.</li>
+      </ol>
+    </div>
+
+    <!-- - - - - - - - - - - - - - - - -  PROJECTS SECTION - - - - - - - - - - - - - - - - - - --> 
+      
+
+    <div id="Proj" class="content">
+      <img src="images/ProjPic3.jpg" width="100%" style="bottom:50%">
+      <div style="text-align:center;padding:5% 5% 3% 5%">
+        <img src="images/c4dmlogo.png" width="35%">
+        <img src="images/logo_yamaha.gif" width="25%">
+      </div>
+
+      <h1> INTELLIGENT INTERFACES FOR ACCELERATING INTERMEDIATE PIANO LEARNING</h1>
+      <p>Between September 2012 and June 2013 I was a research assistant on a project that sought to develop new technologies to assist intermediate piano learners. Supervised by <a class="link" href="http://www.eecs.qmul.ac.uk/~eniale/" target="_blank"> Prof. Elaine Chew</a> from the <a href = "http://c4dm.eecs.qmul.ac.uk" target="_blank">centre for digital music</a> and working in conjunction with <a href="http://uk.yamaha.com" target="_blank">Yamaha R&D</a>, my research focussed on developing algorithms that automatically generate fingerings for pieces of music, as well as creating new metrics that measure the difficulty level of a piece of music.</p>
+      <div style="text-align: center;padding:5% 5% 3% 5%"><img src="images/unifiedlogo.png" width="30%"></div>
+      <h1>INDOOR POSITIONING APP</h1>
+      <p><a class="link" href="http://unifiedapp.com/" target="_blank">Unified</a> is an iPhone app that enables you to find your friends inside crowded venues using bluetooth technology. Over the summer of 2015 I completely re-designed and implemented the system that pinpoints a user's location by processing and analysing bluetooth signals from <a href="https://en.wikipedia.org/wiki/IBeacon" target="_blank">iBeacons</a> that are strategically placed inside a venue. This technology was successfully installed in a number of high profile clubs and bars in Ibiza and has been further adapted for conferences and events.</p>
+    </div>
+
+
+    <!-- - - - - - - - - - - - - - - - -  QUESTION MARK SECTION - - - - - - - - - - - - - - - - - - -->
+    <div id="qMark" class="content" style="padding-top:50px">
+      <h1>TILINGS</h1>
+      <p>You'll have noticed that on entering this website the background became covered in diamond shapes. This is known as a <a>rhombus tiling</a> of a region, and these objects have been studied in one form or another for <a>over 100 years</a>. </p>
+
+      <p>Much of my research over the past four years has focused on finding formulas that <a>count</a> in how many <a>ways</a> different <a>regions</a> can be covered in these <a>tiles</a>.</p>
+
+      <p>Imagine we <a>fix a hexagon</a> (so that it cannot be rotated or reflected or moved in any way, and therefore has a <a>top</a> and a <a>bottom</a>, imagine it was drawn on a wall for example). If I give you a set of <a>three diamond shaped tiles</a>, where all sides of the tiles are the <a>length</a> of one side of the hexagon, then in <a>how many ways</a> can you fit the tiles inside the hexagon?</p>
+
+      
+      <div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id = "mapHex1" class = "svg-content-responsive" width="400" height="140" viewBox="0 5 428 200" preserveAspectRatio="xMidYMid meet">
+
+
+    
+
+    <polyline id = "rhombLeft" points = "100,190 48.037,160 48.037,100 100,130 100,190"></polyline>
+
+    <polyline id = "rhombRight" points = "335,150 335,90 386.963,60 386.963,120 335,150"></polyline>
+
+    <polyline id = "rhombTop" points = "120,10 171.963,40 120.963,70 68.037,40 120,10"></polyline>
+
+    <polyline id = "hex" points = "215,70 266.963,100 266.963,160 215,190 163.037,160 163.037,100 215,70"></polyline>
+
+    
+
+    <!-- drawing elements to go here -->
+
+</svg></div>
+
+        
+      
+    
+
+      <p>The answer is <a>2</a>, since the tiles can meet along a <a>vertical edge</a> either comes from the <a>bottom</a> of the hexagon or otherwise from the <a>top</a>. If we choose to describe the length of the side of the hexagon in terms of how many tiles may fit edgewise along one of its sides, then the <a>number</a> of tilings of a <a>hexagon of side length one</a> is 2.</p>
+
+      <p>There is a beautiful formula that was discovered by <a href="https://en.wikipedia.org/wiki/Percy_Alexander_MacMahon" target="_blank">Percy Alexander MacMahon</a> in 1916 that tells you <a>exactly</a> how many possible ways a set of rhombus tiles fit completely inside a hexagon of any size. Every time you click the <a>Tile the page</a> button a random tiling is generated and the background is a section of this tiling.</p>
+
+      <p>The <a>total number</a> of random tilings from which each background could be taken is: <a style="text-align:center;word-wrap:break-word;display:block;padding-top:1%">2494182614850629334906980002072655276608016155634366708626420896704131144435653399498891756485857604547775408281487500</a></p>
+
+
+
+      <h1>DUAL SPACE</h1>
+      <p>Click on the <a>Dualise</a> button in the navigation bar. You'll notice that the <a>rhombus</a> tiles have been replaced with <a>white and grey circles</a> that are connected with <a>lines</a>- this is known as a <a>dual representation</a> of a tiling.</p>
+
+      <p>A hexagon of side length one may be thought of as a collection of <a>six equilateral triangles</a> (triangles that have all sides the same length) that all meet at one point and do not overlap. <a>Three</a> of these triangles point to the <a>left</a>, while the other <a>three</a> point to the <a>right</a>. In the same way, a rhombus is formed from a <a>pair</a> of equilateral triangles, one left-pointing and one right-pointing. </p>
+      <p>Suppose we draw <a>white</a> circles inside all <a>left-pointing</a> triangles and <a>grey</a> circles inside all <a>right-pointing</a> ones. Forming a rhombus with two tiles corresponds to <a>drawing an edge</a> between a white circle and one of its neighbouring grey circles, so the <a>two rhombus tilings</a> of the hexagon of side length one represent the <a>two different ways</a> in which we can <a>join white circles to grey ones</a> inside that same hexagon when we view it as a collection of six triangles.</p>
+  <div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" id = "dualMatch" class = "svg-content-responsive" width="400" height="140" viewBox="100 60 428 140" preserveAspectRatio="xMidYMid meet">
+<polyline id = "match" points = "215,70 266.963,100 266.963,160 215,190 163.037,160 163.037,100 215,70"></polyline>
+
+<line class="eqLine" x1="215" y1="130" x2="215" y2="70"></line>
+<line x1="215" y1="130" x2="215" y2="190"></line>
+<line x1="215" y1="130" x2="266.963" y2="100"></line>
+<line class="eqLine" x1="215" y1="130" x2="266.963" y2="160"></line>
+<line class="eqLine" x1="215" y1="130" x2="163.037" y2="160"></line>
+<line x1="215" y1="130" x2="163.037" y2="100"></line>
+<line class="matchLine1" x1="197.6790" y1="100" x2="232.321" y2="100"></line>
+<line class="matchLine1" x1="197.6790" y1="160" x2="180.358" y2="130"></line>
+<line class="matchLine1" x1="232.321" y1="160" x2="249.642" y2="130"></line>
+<circle class="circ" cx="197.679" cy ="100" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="197.679" cy ="160" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="249.642" cy ="130" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="180.358" cy ="130" r="8" stroke="#797979" fill="#797979"/>
+<circle class="circ" cx="232.321" cy ="160" r="8" stroke="#797979" fill="#797979"/>
+<circle class="circ" cx="232.321" cy ="100" r="8" stroke="#797979" fill="#797979"/>
+
+<polyline id = "match" points = "415,70 466.963,100 466.963,160 415,190 363.037,160 363.037,100 415,70"></polyline>
+
+<line x1="415" y1="130" x2="415" y2="70"></line>
+<line class="eqLine" x1="415" y1="130" x2="415" y2="190"></line>
+<line class="eqLine" x1="415" y1="130" x2="466.963" y2="100"></line>
+<line x1="415" y1="130" x2="466.963" y2="160"></line>
+<line x1="415" y1="130" x2="363.037" y2="160"></line>
+<line class="eqLine" x1="415" y1="130" x2="363.037" y2="100"></line>
+<line class="matchLine2" x1="397.6790" y1="100" x2="380.358" y2="130"></line>
+<line class="matchLine2" x1="397.6790" y1="160" x2="432.321" y2="160"></line>
+<line class="matchLine2" x1="449.642" y1="130" x2="432.321" y2="100"></line>
+<circle class="circ" cx="397.679" cy ="100" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="397.679" cy ="160" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="449.642" cy ="130" r="8" stroke="#797979" fill="white"/>
+<circle class="circ" cx="380.358" cy ="130" r="8" stroke="#797979" fill="#797979"/>
+<circle class="circ" cx="432.321" cy ="160" r="8" stroke="#797979" fill="#797979"/>
+<circle class="circ" cx="432.321" cy ="100" r="8" stroke="#797979" fill="#797979"/>
+</svg></div>
+
+
+
+</svg>
+
+      <p>A <a>collection of edges</a> between circles in a hexagon is called a <a>perfect matching</a> of the vertices (all the grey circles are perfectly matched with the white ones). Every hexagon can be drawn as a collection of equilateral triangles all stuck together so there are no gaps between them, so every <a>rhombus tiling</a> of a hexagon can be represented as a <a>perfect matching</a> between the white and grey circles that you can put inside the left and right pointing triangles. When you click the <a>Dualise</a> button you switch between the two <a>equivalent representations</a> of one tiling.</p>
+
+    </div>
+
+
+    <!-- - - - - - - - - - - - - - - - -  END OF CONTENT - - - - - - - - - - - - - - - - - - --> 
+
+    <a class="copyright" style="color: #595959;top:98%;position:fixed;font-size:50%">&copy Tomack Gilmore</a>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11172699; 
+var sc_invisible=1; 
+var sc_security="53a1a562"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify stats"
+href="http://statcounter.com/shopify/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11172699/0/53a1a562/1/"
+alt="shopify stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+  </body>
+
